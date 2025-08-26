@@ -4,6 +4,9 @@ import { X, Calendar, ChevronDown, UploadCloud } from "lucide-react";
 const locations = ["Chennai", "Bangalore", "Mumbai", "Delhi", "Hyderabad", "Pune"];
 const jobTypes = ["FullTime", "Internship", "Partime", "Contract"];
 
+const BASE_URL = "http://13.233.28.44:8080/";
+
+
 const CreateJobModal = ({ onClose, refreshJobs }) => {
   const [formData, setFormData] = useState({
     jobTitle: "",
@@ -62,7 +65,7 @@ data.append("PostedByUserId", formData.postedByUserId.toString());
     }
 
     try {
-      const res = await fetch("http://localhost:8080/api/jobs", {
+      const res = await fetch(BASE_URL+"api/jobs", {
         method: "POST",
         body: data,
       });

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+const BASE_URL = "http://13.233.28.44:8080/";
 export default function FindJobs() {
   const [jobs, setJobs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -12,7 +12,7 @@ export default function FindJobs() {
     const fetchJobs = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:8080/api/jobs");
+        const response = await fetch(BASE_URL+"api/jobs");
         if (!response.ok) {
           throw new Error("Failed to fetch jobs");
         }
@@ -104,7 +104,7 @@ export default function FindJobs() {
               <div className="flex items-center mb-4">
                 {job.logoPath ? (
                   <img
-                    src={`http://localhost:8080${job.logoPath}`}
+                    src={`http://13.233.28.44:8080${job.logoPath}`}
                     alt={job.companyName}
                     className="w-12 h-12 rounded-full object-contain bg-gray-100 border mr-4"
                   />
