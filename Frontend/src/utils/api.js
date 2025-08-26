@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://13.233.28.44:8080/api";
+const API_BASE_URL = "http://13.233.28.44:8080/api";
 
 
 // Login user
