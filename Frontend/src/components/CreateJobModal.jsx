@@ -65,7 +65,7 @@ data.append("PostedByUserId", formData.postedByUserId.toString());
     }
 
     try {
-      const res = await fetch(BASE_URL+"api/jobs", {
+      const res = await fetch(BASE_URL+"api/Jobs", {
         method: "POST",
         body: data,
       });

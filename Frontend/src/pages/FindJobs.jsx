@@ -12,7 +12,7 @@ export default function FindJobs() {
     const fetchJobs = async () => {
       try {
         setLoading(true);
-        const response = await fetch(BASE_URL+"api/jobs");
+        const response = await fetch(BASE_URL+"api/Jobs");
         if (!response.ok) {
           throw new Error("Failed to fetch jobs");
         }

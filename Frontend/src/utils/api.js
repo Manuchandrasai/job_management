@@ -35,14 +35,14 @@ export async function signup(userData) {
 
 // Fetch list of jobs
 export async function fetchJobs() {
-  const response = await fetch(`${API_BASE_URL}/jobs`);
+  const response = await fetch(`${API_BASE_URL}/Jobs`);
   if (!response.ok) throw new Error("Failed to fetch jobs");
   return response.json();
 }
 
 // Create a new job posting
 export async function createJob(formData) {
-  const response = await fetch(`${API_BASE_URL}/jobs`, {
+  const response = await fetch(`${API_BASE_URL}/Jobs`, {
     method: "POST",
     body: formData,
   });
