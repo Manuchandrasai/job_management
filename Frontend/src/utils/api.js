@@ -34,25 +34,13 @@ export async function signup(userData) {
 }
 
 // Fetch list of jobs
+// Fetch list of jobs
 export async function fetchJobs() {
-  const response = await fetch(`${API_BASE_URL}/Jobs`, {
-    method: 'GET', // Explicit but optional since GET is default
-    headers: {
-      'Accept': '*/*' // Mirrors the curl's accept header
-    }
-  });
-
-  if (!response.ok) {
-    throw new Error(`Failed to fetch jobs: ${response.status} ${response.statusText}`);
-  }
-
-  const data = await response.json();
-  return data;
-}export async function fetchJobs() {
   const response = await fetch(`${API_BASE_URL}/Jobs`);
   if (!response.ok) throw new Error("Failed to fetch jobs");
   return response.json();
 }
+
 
 // Create a new job posting
 export async function createJob(formData) {
