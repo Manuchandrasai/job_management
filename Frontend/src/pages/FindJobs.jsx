@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-const BASE_URL = "https://13.233.28.44:8080/";
+const BASE_URL = "https://d89f5c4dc8bd.ngrok-free.app/";
 export default function FindJobs() {
   const [jobs, setJobs] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -104,7 +104,7 @@ export default function FindJobs() {
               <div className="flex items-center mb-4">
                 {job.logoPath ? (
                   <img
-                    src={`https://13.233.28.44:8080${job.logoPath}`}
+                    src={`https://d89f5c4dc8bd.ngrok-free.app${job.logoPath}`}
                     alt={job.companyName}
                     className="w-12 h-12 rounded-full object-contain bg-gray-100 border mr-4"
                   />

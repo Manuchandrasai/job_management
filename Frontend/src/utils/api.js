@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://13.233.28.44:8080/api";
+const API_BASE_URL = "https://d89f5c4dc8bd.ngrok-free.app/api";
 
 
 // Login user
@@ -35,9 +35,19 @@ export async function signup(userData) {
 
 // Fetch list of jobs
 export async function fetchJobs() {
-  const response = await fetch(`${API_BASE_URL}/Jobs`);
-  if (!response.ok) throw new Error("Failed to fetch jobs");
-  return response.json();
+  const response = await fetch(`${API_BASE_URL}/Jobs`, {
+    method: 'GET', // Explicit but optional since GET is default
+    headers: {
+      'Accept': '*/*' // Mirrors the curl's accept header
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch jobs: ${response.status} ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  return data;
 }
 
 // Create a new job posting

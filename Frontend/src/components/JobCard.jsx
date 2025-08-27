@@ -4,7 +4,7 @@ import { MapPin, Clock, Briefcase } from "lucide-react";
 const JobCard = ({ job }) => {
   const logo = job.logoPath ? (
     <img
-      src={`https://13.233.28.44:8080${job.logoPath}`}
+      src={`https://d89f5c4dc8bd.ngrok-free.app${job.logoPath}`}
       alt={job.companyName || "Logo"}
       className="w-15 h-14 rounded-full object-contain bg-white border mr-3"
     />
