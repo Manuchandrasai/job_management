@@ -4,7 +4,7 @@ import { X, Calendar, ChevronDown, UploadCloud } from "lucide-react";
 const locations = ["Chennai", "Bangalore", "Mumbai", "Delhi", "Hyderabad", "Pune"];
 const jobTypes = ["FullTime", "Internship", "Partime", "Contract"];
 
-const BASE_URL = "http://13.233.28.44:8080/";
+const BASE_URL = "https://13.233.28.44:8080/";
 
 
 const CreateJobModal = ({ onClose, refreshJobs }) => {
