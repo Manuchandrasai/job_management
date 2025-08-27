@@ -48,6 +48,10 @@ export async function fetchJobs() {
 
   const data = await response.json();
   return data;
+}export async function fetchJobs() {
+  const response = await fetch(`${API_BASE_URL}/Jobs`);
+  if (!response.ok) throw new Error("Failed to fetch jobs");
+  return response.json();
 }
 
 // Create a new job posting
